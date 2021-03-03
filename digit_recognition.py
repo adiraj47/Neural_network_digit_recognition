@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt  #For non linear functions
 mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data() #It splits the data into training data & test data
 x_train = tf.keras.utils.normalize(x_train, axis=1)     #This is to normalize the o/p i.e to bring total output to 1
-x_test = tf.keras.utils.normalize(x_test, axis=1)      #to normailze data
+x_test = tf.keras.utils.normalize(x_test, axis=1)      
 model = tf.keras.models.Sequential()                  #Sequential model is loaded
 model.add(tf.keras.layers.Flatten(input_shape=(28, 28)))    #i/p layer
 model.add(tf.keras.layers.Dense(units = 128, activation = tf.nn.relu))  #hidden layer1
